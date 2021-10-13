@@ -1,0 +1,14 @@
+<style>
+  div {
+    padding: 1rem;
+    border: 1px solid;
+  }
+
+  div:nth-child(1) { background-color: gainsboro; }
+	
+  div:nth-child(2) {
+    background-color: grey;
+    color: white;
+    border: 1px solid black;
+  }
+</style>

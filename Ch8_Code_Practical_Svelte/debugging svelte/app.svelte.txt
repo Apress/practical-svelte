@@ -1,0 +1,24 @@
+<script>
+	let user = {
+		firstname: 'Alex',
+		lastname: 'Libby'
+	};
+	
+	let fruit = {
+		name: 'apple',
+		price: '$1'
+	};
+</script>
+
+<input bind:value={user.firstname}>
+<input bind:value={user.lastname}>
+
+<input bind:value={fruit.name}>
+<input bind:value={fruit.price}>
+
+{@debug user, fruit}
+
+<h1>Hello {user.firstname}!</h1>
+<p>
+	Price of {fruit.name}: {fruit.price}
+</p>

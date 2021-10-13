@@ -1,0 +1,22 @@
+<script>
+	import AudioPlayer from './AudioPlayer.svelte';
+</script>
+
+<AudioPlayer
+src="https://sveltejs.github.io/assets/music/strauss.mp3"
+	title="The Blue Danube Waltz"
+	composer="Johann Strauss"
+	performer="European Archive"
+/>
+
+<AudioPlayer src="https://sveltejs.github.io/assets/music/holst.mp3"
+	title="Mars, the Bringer of War"
+	composer="Gustav Holst"
+	performer="USAF Heritage of America Band"
+/>
+
+<AudioPlayer src="https://sveltejs.github.io/assets/music/beethoven.mp3"
+	title="Symphony no. 5 in Cm, Op. 67 - I. Allegro con brio"
+	composer="Ludwig van Beethoven"
+	performer="European Archive"
+/>

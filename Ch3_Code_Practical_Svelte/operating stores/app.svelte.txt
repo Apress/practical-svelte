@@ -1,0 +1,14 @@
+<script>
+  import { username } from './stores.js'
+	
+  username.set('new username');
+  const newUsername = 'Alex';
+	
+  username.update(existing => {
+    console.log(`Updating username from ${existing} to ${newUsername}`);
+    return newUsername
+  })
+</script>
+<h1>
+  Hello, {newUsername}!
+</h1>

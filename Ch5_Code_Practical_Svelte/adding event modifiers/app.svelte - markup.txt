@@ -1,0 +1,7 @@
+<div on:click={() => console.log('Outer div')}>
+   <h1>Outer div</h1>
+   <div on:click|stopPropagation={() => console.log
+('inner div')}>
+    <h1>Inner div</h1>
+  </div>
+</div>

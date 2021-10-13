@@ -1,0 +1,26 @@
+1. Enter this:
+	  preprocess: [
+            scss() 
+          ]
+	}),
+
+
+2. Add to a new file as svelte.config.js:
+const preprocess = require('svelte-preprocess');
+
+module.exports = {
+  preprocess: preprocess(),
+  // ...other svelte options could go here
+};
+
+
+3. The updated Sass code should look like this:
+    margin-top: 10px;  
+
+    &:hover,
+    &:active { 
+      background-color: #000000;  
+      color: #ffffff;  
+      box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.26);  
+    }
+  }

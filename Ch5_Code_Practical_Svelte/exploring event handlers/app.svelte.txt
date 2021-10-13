@@ -1,0 +1,6 @@
+<script>
+  function handleClick(event) {
+    window.alert('Message from the click handler’);
+  }
+</script>
+<button on:click="{handleClick}">Click me</button>

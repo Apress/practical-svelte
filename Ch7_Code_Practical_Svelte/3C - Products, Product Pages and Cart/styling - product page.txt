@@ -1,0 +1,22 @@
+<style>
+  #productdetails { 
+    display: flex; 
+    max-width: 800px;    
+    margin: 0 auto; 
+  }
+
+  #productdetails div:nth-child(2) h2 { 
+    text-align: right; 
+  }
+
+  #productdetails div:nth-child(2) p:nth-child(1) {    
+    font-size: 36px; 
+    font-weight: bold; 
+    border-bottom: 1px solid grey; 
+    margin-bottom: 0; 
+  }
+
+  #productdetails div:nth-child(2) p:nth-child(2) {    
+    color: lightgrey; 
+  }
+</style>

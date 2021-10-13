@@ -1,0 +1,3 @@
+<span>
+  This is a test site only - please note that no orders will be accepted
+</span>

@@ -1,0 +1,13 @@
+<h1>Coffees for Sale</h1>
+<ul>
+  {#each coffees as { id, name }, i}
+    <!-- open each block -->
+    <li>
+      <a target="_blank" href="{id}">
+	    <img src="https://via.placeholder.com/150" alt="placeholder">
+          <span>{name}</span>
+      </a>
+      </li>
+    <!-- close each block -->
+  {/each}
+</ul>

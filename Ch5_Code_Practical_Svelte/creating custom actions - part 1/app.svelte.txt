@@ -1,0 +1,14 @@
+<script>
+  import { onMount } from "svelte";
+  let node;
+
+  function tellMeAboutTheNode(node) {
+    console.log("Information: ", node.tagName);
+  }
+
+  onMount(() => {
+    tellMeAboutTheNode(node);
+  });
+</script>
+
+<h1 bind:this={node}>Hello onMount!</h1>

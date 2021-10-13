@@ -1,0 +1,6 @@
+    <Route path="/"><Home/></Route>
+    <Route path="products"><Products /></Route>
+    <Route path="about"><About /></Route>
+    <Route path="coffee"><Coffee /></Route>
+    <Route path="contact"><Contact /></Route>
+    <Route path="/product/:id"><Product/></Route>

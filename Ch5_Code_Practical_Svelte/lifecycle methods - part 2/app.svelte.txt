@@ -1,0 +1,13 @@
+<script>
+  import { beforeUpdate} from "svelte";
+  let count = 1;
+
+  beforeUpdate(function() {
+    alert("You can see me before count value is updated");
+  });
+</script>
+
+<div>
+  <h1>{count}</h1>
+  <button on:click={() => count++}>Increment</button>
+</div>

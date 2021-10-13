@@ -1,0 +1,6 @@
+<script>
+  export let name;
+  export let handleClick;
+</script>
+
+<button on:click={handleClick}>{name}</button>

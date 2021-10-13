@@ -1,0 +1,104 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: #333;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/** ADDED FOR DEMO **/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+section {
+  max-width: 60rem;
+}
+
+#banner {
+  margin: 20px auto;
+  width: 50%;
+  display: table;
+}
+
+div.modal>div {
+  display: flex;
+  justify-content: center;
+}
+
+div.modal>div:nth-child(1) {
+  justify-content: flex-end;
+}
+
+div.modal>div>button {
+  background-color: #ffffff;
+  border: 1px solid #c4c4c4;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav {
+  background-color: #c59747;
+}
+
+nav ul {
+  display: flex;
+  align-items: start;
+  list-style-type: none;
+  margin: 0;
+  width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+nav ul li {
+  padding: 6px 0;
+}
+
+nav ul li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  transition: 0.5s;
+  padding: 5px 15px;
+  font-weight: bold;
+  color: #552200;  
+}
+
+nav ul li a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #552200;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+nav ul li a:hover {
+  color: #000000;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/** FROM APP.SVELTE **/
+main {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 1040px;
+}

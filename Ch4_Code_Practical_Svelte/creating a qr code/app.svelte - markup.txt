@@ -1,0 +1,10 @@
+<h1>
+  A Random QR Code...
+</h1>
+{#if textPresent}
+  <img src={API_URL} alt="qr-code"/><br>
+{:else}
+  <h2>
+    Are you sure you can see me?
+  </h2>
+{/if}

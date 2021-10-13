@@ -1,0 +1,14 @@
+<script>
+let coffees = [
+  { id: 'coffee1', name: 'Peruvian Blend' },
+  { id: 'coffee2', name: 'African Inca' },
+  { id: 'coffee3', name: 'Ristretto' },
+  { id: 'coffee4', name: 'Peruvian Blend Decaff' },
+  { id: 'coffee5', name: 'African Inca Decaff' },
+  { id: 'coffee6', name: 'Ristretto Decaff' }	
+];
+
+function handleClick() {
+  coffees = coffees.slice(5,6)
+}
+</script>

@@ -1,0 +1,10 @@
+<style>
+  span {
+    background-color: #ff0000;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+</style>

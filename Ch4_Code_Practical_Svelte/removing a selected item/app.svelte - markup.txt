@@ -1,0 +1,16 @@
+<h1>Coffees for Sale</h1>
+<button on:click={() => handleClick()}>
+	Remove selected item(s)
+</button>
+<ul>
+  {#each coffees as coffee (coffee.id)}
+    <!-- open each block -->
+    <li>
+      <a target="_blank" href="{coffee.id}">
+	    <img src="https://via.placeholder.com/150" alt="placeholder">
+        <span>{coffee.name}</span>
+      </a>
+      </li>
+    <!-- close each block -->
+  {/each}
+</ul>

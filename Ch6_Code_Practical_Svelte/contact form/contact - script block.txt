@@ -1,0 +1,30 @@
+<script>
+  import * as yup from 'yup';
+  import {Form, Message, isInvalid} from 'svelte-yup';
+
+  $: invalid = (name)=>{
+      if(submitted){
+          return isInvalid(schema, name, fields);
+      }
+      return false;
+  }
+
+  let schema = yup.object().shape({
+    name: yup.string().required().max(30).label("Name"),
+    email: yup.string().required().email().label("Email address"),
+  });
+
+  let fields = {email: "", name: "", yourmessage: ""};
+  let submitted = false;
+  let isValid;
+  
+  function formSubmit(){
+    submitted = true;
+    isValid = schema.isValidSync(fields);
+  
+    if(isValid){
+        alert('Everything is validated!');
+        console.log("Validated fields", fields);
+    }
+  }
+</script>

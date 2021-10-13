@@ -1,0 +1,11 @@
+npm install "@rollup/plugin-json" --save
+
+
+import * as myjson from '../public/stock.json';
+
+
+  {#await $products}
+    <p>...loading products</p>
+  {:then}
+
+  {/await}

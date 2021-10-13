@@ -1,0 +1,27 @@
+<style>
+  @-webkit-keyframes scale-up-top {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 50% 0%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 50% 0%;
+      }
+    }
+  @keyframes scale-up-top {
+    0% {
+      transform: scale(0.5);
+      transform-origin: 50% 0%;
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: 50% 0%;
+    }
+    }
+
+	.cube{ background-color: gainsboro;	color: black;
+font-weight: bold; width: 100px; height: 100px; display: flex; justify-content: center;	align-items:center; margin-top: 10px; }
+	
+	.scale-up-top { animation: scale-up-top 2.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; }
+</style>

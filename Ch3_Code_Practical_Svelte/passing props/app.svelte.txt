@@ -1,0 +1,21 @@
+<script>
+  import Button from "./Button.svelte";
+
+  function Twitter() {
+    console.log("Twitter button clicked");
+  }
+  function Instagram() {
+    console.log("Instagram button clicked");
+  }
+
+  function Facebook() {
+    console.log("Facebook button clicked");
+  }
+</script>
+
+<div>
+  <h1>Get me on social media!</h1>
+  <Button name="twitter" handleClick={Twitter} />
+  <Button name="instagram" handleClick={Instagram} />
+  <Button name="facebook" handleClick={Facebook} />
+</div>

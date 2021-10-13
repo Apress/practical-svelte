@@ -1,0 +1,7 @@
+<script>
+  function tellMeAboutTheNode(node) {
+    console.log("Information: ", node.tagName);
+  }
+</script>
+
+<h1 use:tellMeAboutTheNode>Hello Action!</h1>

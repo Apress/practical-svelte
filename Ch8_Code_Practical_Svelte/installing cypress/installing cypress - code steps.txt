@@ -1,0 +1,14 @@
+files:module.exports = (on) => {
+  const filePreprocessor = require('@bahmutov/cy-rollup')
+  on('file:preprocessor', filePreprocessor())
+}
+
+
+{
+  "experimentalComponentTesting": true,
+  "componentFolder": "./src/components",
+  "testFiles": "**/*spec.js"
+}
+
+
+

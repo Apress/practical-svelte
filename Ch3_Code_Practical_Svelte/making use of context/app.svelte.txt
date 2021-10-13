@@ -1,0 +1,12 @@
+<script>
+  import {setContext, getContext} from 'svelte';
+  import {writable} from 'svelte/store';
+  import Child from './Child.svelte';
+
+  let state = writable({color: 'hotpink'});
+  setContext('state', state);
+
+  setTimeout(() => {$state = {color: 'red'}},2000);
+</script>
+
+<Child />

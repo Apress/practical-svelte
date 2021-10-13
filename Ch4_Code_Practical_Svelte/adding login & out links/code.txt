@@ -1,0 +1,38 @@
+export let name;
+
+
+import { setContext } from "svelte";
+let loggedIn;
+
+
+
+if (name == "") {
+  loggedIn = false;
+} else {
+  loggedIn = true;
+}
+
+setContext('key', {
+  loggedIn
+});
+
+
+
+
+import { getContext } from "svelte";
+const { loggedIn } = getContext('key');
+
+
+
+
+
+
+<div class="basket">
+  {#if loggedIn}
+    <div>Hi, {name} | Logout</div>
+  {:else}
+    <div>Hi, Guest | Login</div>
+  {/if}
+  <div><InlineSVG src="/images/shoppingcart.svg" {...attributesCart} /></div>
+</div>
+

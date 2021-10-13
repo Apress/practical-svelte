@@ -1,0 +1,7 @@
+<script>
+  let coffees = [
+    { id: 'coffee1', name: 'Peruvian Blend' },
+    { id: 'coffee2', name: 'African Inca' },
+    { id: 'coffee3', name: 'Ristretto' }
+  ];
+</script>

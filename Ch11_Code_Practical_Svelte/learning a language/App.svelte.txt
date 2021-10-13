@@ -1,0 +1,119 @@
+<script>
+ import { quintOut } from 'svelte/easing';
+ import { crossfade } from 'svelte/transition';
+ import { flip } from 'svelte/animate';
+
+  const [send, receive] = crossfade({
+    fallback(node, params) {
+    const style = getComputedStyle(node);
+	const transform = style.transform === 'none' ? '' : style.transform;
+
+    return {
+      duration: 600,
+      easing: quintOut,
+      css: t => `
+        transform: ${transform} scale(${t});
+        opacity: ${t}
+      `
+    };
+  }
+  });
+
+	const words = [
+    { selected: false, value: "Ik" },
+    { selected: false, value: "graag" },
+    { selected: false, value: "Svelte" },
+    { selected: false, value: "gebruik" },
+    { selected: false, value: "echt" },		
+    { selected: false, value: "is" },
+    { selected: false, value: "het" },
+    { selected: false, value: "graaf" },		
+  ]
+  let selected = []
+</script>
+
+<div class="words">
+  <div class="destination">
+    {#each selected as word (word.value)}
+    <span 
+      animate:flip 
+      in:receive={{ key: word.value }}
+        out:send={{ key: word.value }}
+        class="word" 
+						on:click={() => {
+							word.selected = false;
+							selected = selected.filter(w => w.value !== word.value)
+						}}>{word.value}</span>
+		{/each}
+	</div>
+	<div class="origin">
+		{#each words.filter(w => !w.selected) as word (word.value)}
+			<span 
+						animate:flip 
+						in:receive={{ key: word.value }}
+						out:send={{ key: word.value }}
+						class="word" 
+						on:click={() => {
+							word.selected = true;
+							selected = [...selected, word];
+						}}>{word.value}</span>
+		{/each}
+	</div>
+</div>
+
+<style>
+	:global(body) {
+		display: flex;
+		flex-direction: column;
+    flex: 0 0 100%;
+  	margin: 0;
+  	padding: 3rem 1rem;
+  	background: #ffffff;
+  	align-items: center;
+    justify-content: flex-start;
+		color: #000000;
+	}
+	
+	.words {
+		display: flex;
+		flex-direction: column;
+		padding: 2rem;
+		border: 1px solid #596265;
+		border-radius: 1rem;
+		width: 350px;
+		max-width: 100%;
+	}
+
+	.destination {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		margin: 0 0 4rem;
+		height: 5.5rem;
+		background: repeating-linear-gradient(to bottom, transparent 0, transparent 2.625rem, #596265 2.625rem, #596265 2.6875rem);
+	}
+	
+	.destination .word {
+		margin: 0 0.125rem 0.25rem;
+	}
+
+	.origin {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: flex-start;
+		max-width: 275px;
+		margin: 0 auto;
+		row-gap: 5px;
+    column-gap: 5px;
+	}
+
+	.word {
+		background: #c0c0c0;
+		border: 1px solid #596265;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		cursor: pointer;
+		font-weight: 700;
+	}
+</style>

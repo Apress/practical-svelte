@@ -1,0 +1,60 @@
+<script>
+  let a = 1;	
+  let name = 'Guest';
+  let grain = 'Coarse';
+  let b = ['50g'];
+	
+  let coffeeType = [
+    'Coarse',
+    'Fine',
+    'Wholebean'
+  ];	
+
+  let sizes = [ '50g', '75g', '100g' ];
+</script>
+
+<p>
+  Please enter your name: <input bind:value={name}>
+</p>
+
+<h1>Hi {name}!</h1>
+<p>
+  This is what we have available in stock right now:
+</p>
+
+<h2>
+  Grain
+</h2>
+<label>
+  <input type=radio bind:group={grain} value={'Coarse'}>
+  Coarse
+</label>
+
+<label>
+  <input type=radio bind:group={grain} value={'Fine'}>
+  Fine
+</label>
+
+<label>
+  <input type=radio bind:group={grain} value={'Whole Bean'}>
+  Whole Bean
+</label>
+
+<h2>
+  Weight
+</h2>
+{#each sizes as bagSize}
+  <label>
+    <input type=checkbox bind:group={b} value={bagSize}>
+    {bagSize}
+   </label>
+{/each}
+
+<p>
+  Number of bags required:
+</p>
+<label>
+  <input type=number bind:value={a} min=1 max=10>
+</label>
+
+You've chosen {a} x {b} {a === 1? "bag": "bags"} of {grain} coffee

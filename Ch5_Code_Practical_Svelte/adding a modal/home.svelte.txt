@@ -1,0 +1,9 @@
+<Modal on:close={close}>
+  <h1>Get 10% off your first order!</h1>
+  <p>
+    <span>Use code 10PERCENT at checkout</span>
+    <img src="images/3.png" alt="image3" />
+  </p>
+  <button on:click={close}>X</button>
+</Modal>
+

@@ -1,0 +1,13 @@
+   {#each $products as product}
+      <div>
+        <div class="image" style="background-image: url({product.image})"></div>
+        <h4><Link to="product/{product.id}">
+{product.name}</Link></h4>
+          <p>${product.price}</p>
+        <div class="cta">
+          <CTAButton on:click={() => addToCart(product)}>
+            Add to cart
+          </CTAButton>
+        </div>
+      </div>
+    {/each}

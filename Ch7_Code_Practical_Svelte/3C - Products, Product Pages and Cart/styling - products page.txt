@@ -1,0 +1,26 @@
+<style>
+  .product-list { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    column-gap: 20px; 
+    grid-row-gap: 20px; 
+  }
+  
+  .product-list > div { 
+    border: 1px solid #c4c4c4;   
+    padding: 10px; 
+  }
+  
+  .image { 
+    height: 150px; 
+    width: auto; 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+
+  .cta { 
+    display: flex; 
+    justify-content: space-between; 
+  }
+</style>

@@ -1,0 +1,17 @@
+<header>
+  <div>
+    <span><InlineSVG src="/images/logo.svg" {...attributes} /></span>
+    <span>Small Coffee Company</span>
+  </div>
+  <div>
+    <div class="basket">
+      {#if loggedIn}
+        <div>Hi, {name} | Logout</div>
+      {:else}
+        <div>Hi, Guest | Login</div>
+      {/if}
+      <div><InlineSVG src="/images/shoppingcart.svg" {...attributesCart} /></div>
+    </div>
+    <div class="basketcount">{$cart.length} items: ${$totalprice}</div>
+  </div>
+</header>

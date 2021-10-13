@@ -1,0 +1,8 @@
+<script>
+  import {getContext} from 'svelte';
+  const state = getContext('state')
+</script>
+
+<h1>
+	This is the {$state.color} value
+</h1>

@@ -1,0 +1,10 @@
+<script>
+  function handleSubmit() {
+    console.log("success");
+  }
+</script>
+
+<form on:submit|preventDefault={handleSubmit}>
+  <input type="text" placeholder="Name" />
+  <button>submit</button>
+</form>

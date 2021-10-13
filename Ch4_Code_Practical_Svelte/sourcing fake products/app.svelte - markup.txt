@@ -1,0 +1,10 @@
+<h1>My Fake Store</h1>
+
+{#await fetchImage}
+  <p>...loading products</p>
+{:then data}
+  <div>
+      <img src={data.image} alt="product" />
+      <span>{data.title}</span>
+  </div>
+{/await}

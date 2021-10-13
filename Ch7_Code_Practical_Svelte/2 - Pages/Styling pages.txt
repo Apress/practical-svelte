@@ -1,0 +1,36 @@
+<style>
+  #content { 
+    display: flex; 
+    column-gap: 80px; 
+  }
+  
+  .form, label { 
+    display: flex; 
+    flex-direction: column; 
+  }
+  
+  label { 
+    padding-top: 10px; 
+  }
+  
+  input { 
+    width: 380px; 
+    margin-right: 10px; 
+  }
+  
+  textarea { 
+    width: 380px; 
+  }
+  
+  .formformat { 
+    display: flex; 
+  }
+  
+  .invalid { 
+    border-color: red !important; 
+  }
+  
+  .submitbutton { 
+    display: flex; 
+  }
+</style>

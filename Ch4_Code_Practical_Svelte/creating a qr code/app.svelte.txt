@@ -1,0 +1,10 @@
+<script>
+  let inputText = "I love Svelte!";
+  let textPresent = false;
+  let API_URL = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=";
+
+  if (inputText !== "") {
+    textPresent = true;
+    API_URL += inputText;
+  }
+</script>

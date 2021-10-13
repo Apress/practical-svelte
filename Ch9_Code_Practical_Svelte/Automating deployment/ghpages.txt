@@ -1,0 +1,17 @@
+var ghpages = require('gh-pages');
+
+ghpages.publish(
+  'public', // path to public directory
+  {
+    branch: 'gh-pages',
+    repo: 'https://github.com/username/
+yourproject.git', 
+    user: {
+      name: '<ADD YOUR NAME HERE>', 
+      email: '<ADD YOUR EMAIL ADDRESS HERE>'
+    }
+  },
+  () => {
+    console.log('Deploy Complete!')
+  }
+)
