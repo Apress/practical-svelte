@@ -1,3 +1,5 @@
+<!--This forms the main product gallery for the site-->
+
 <script>
   import {products, cart} from "../stores.js";
   import Button from "./Button.svelte";
@@ -6,20 +8,25 @@
   let individualName;
   
   const addToCart = (product) => {
-    for(let item of $cart) {
+		let isFaund = false;
+    for (let item of $cart) {
         if(item.id === product.id) {
-          product.quantity += 1
+          product.quantity++;
           $cart = $cart;
-          return;
+					isFaund = true;
+					break;
         }
     }
-    $cart = [...$cart, product]
+		if(!isFaund){
+			$cart = [...$cart, product];
+		}
+    
   }
+
 </script>
 
-
 <style>
-…TO BE ADDED LATER…
+
 </style>
 
 
@@ -43,4 +50,3 @@
     {/if}
   {/each}
 </div>
-

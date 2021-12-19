@@ -1,3 +1,5 @@
+<!--This is the product card with individual details of a chosen product-->
+
 <script>
   import {products, cart} from "../stores.js";
   import Cart from "./Cart.svelte";  
@@ -7,19 +9,24 @@
   
   const addToCart = (product) => {
     console.log("Added");
+		let isFaund = false;
     for (let item of $cart) {
         if(item.id === product.id) {
-          product.quantity += 1
-          $cart = $cart;
-          return;
+          product.quantity++;
+          //$cart = $cart;
+					isFaund = true;
+					break;
         }
     }
-    $cart = [...$cart, product]
+		if(!isFaund){
+			$cart = [...$cart, product];
+		}
+    
   }
 </script>
 
 <style>
-…TO BE ADDED LATER…
+
 </style>
 
 

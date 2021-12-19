@@ -1,3 +1,5 @@
+<!-- These we will use to create the header for the page layout.-->
+
 <script>
   import { cart } from "../stores.js";  
   import InlineSVG from 'svelte-inline-svg';
@@ -13,11 +15,6 @@
   }
 </script>
 
-<style>
-…TO BE ADDED LATER…
-</style>
-
-
 <header>
   <div>
     <span><InlineSVG src="/images/logo.svg" {...attributes} /></span>
@@ -28,4 +25,3 @@
     <span>{$cart.length}</span>
   </div>
 </header>
-

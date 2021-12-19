@@ -1,16 +1,14 @@
+<!-- These we will use to create the footer for the page layout.-->
+
 <script>
   import InlineSVG from 'svelte-inline-svg';
 
   $: attributes = {
     width: 30,
     height: 30,
-    fill: "#fff",
+    fill: "#FFF",
   }  
 </script>
-
-<style>
-…TO BE ADDED LATER…
-</style>
 
 <footer>
   <div>

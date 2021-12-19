@@ -4,5 +4,5 @@
 </script>
 
 <h1>
-	This is the {$state.color} value
+	This is the <span style="color:{$state.color}">{$state.color}</span> value
 </h1>
