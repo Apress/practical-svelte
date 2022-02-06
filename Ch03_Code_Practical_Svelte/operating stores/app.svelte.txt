@@ -1,0 +1,17 @@
+<script>
+	import {get} from 'svelte/store';
+	import { username } from "./stores.js";
+
+	console.log(`Current username is ${get(username)}`);
+	
+  username.set('new username');
+  const newUsername = 'Alex';
+	
+  username.update(existing => {
+    console.log(`Updating username from ${existing} to ${newUsername}`);
+    return newUsername
+  })
+</script>
+<h1>
+  Hello, {newUsername}!
+</h1>
